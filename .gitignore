@@ -1,0 +1,11 @@
+*
+!/**/
+!*.*
+!LICENSE
+!Makefile
+build/
+lib/
+.vscode/
+tests/
+garbage/
+src/Makefile
