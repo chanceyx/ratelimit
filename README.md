@@ -1,6 +1,6 @@
 # cpp rate limiter
 
-A header-only, C++ rate limiter. Based on c++11.
+A header-only C++ rate limiter. Based on c++11.
 
 English | [中文](README-zh.md)
 
