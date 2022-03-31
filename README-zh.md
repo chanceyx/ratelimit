@@ -27,6 +27,23 @@ $ ./example
 
 ## 使用方法
 
+```c++
+#include <iostream>
+
+#include "rate_limiter.hpp"
+
+int main() {
+  LimiterAtomic limiter_atomic(100, std::chrono::seconds(1), 10);
+  while (1) {
+    // 100 operations per second.
+    auto now = limiter_atomic.take();
+
+    // Do something here ...
+  }
+  return 0;
+}
+```
+
 **基于标准库**`<atomic>`**的限流器用法：**
 
 ```c++
