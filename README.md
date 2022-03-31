@@ -1,6 +1,6 @@
 # cpp rate limiter
 
-A header-only, C++ rate limiter. Based on c++11.
+A header-only C++ rate limiter. Based on c++11.
 
 English | [中文](README-zh.md)
 
@@ -26,6 +26,23 @@ $ ./example
 ```
 
 ## Usage
+
+```c++
+#include <iostream>
+
+#include "rate_limiter.hpp"
+
+int main() {
+  LimiterAtomic limiter_atomic(100, std::chrono::seconds(1), 10);
+  while (1) {
+    // 100 operations per second.
+    auto now = limiter_atomic.take();
+
+    // Do something here ...
+  }
+  return 0;
+}
+```
 
 **atomic based rate limiter usage:**
 
