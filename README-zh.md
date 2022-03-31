@@ -1,23 +1,23 @@
 # cpp rate limiter
 
-A header-only, C++ rate limiter. Based on c++11.
+一个基于 C++11 的限流器， 只包含头文件，无需编译成动态库。
 
-English | [中文](README-zh.md)
+[English](README.md) | 中文
 
-## Platforms
+## 平台
 
 - Linux(gcc 5.4.0+)
 - maxOS(clang 3.5+)
 
-## Getting started
+## 安装使用
 
 ```shell
 $ git clone https://github.com/chanceyx/ratelimit.git
 ```
 
-copy the `rate_limiter.hpp` file to your build tree, and you're ready to go.
+将 `rate_limiter.hpp` 拷贝至项目的目录中即可使用。
 
-## Examples
+## 运行测试用例
 
 ```shell
 $ git clone https://github.com/chanceyx/ratelimit.git
@@ -25,9 +25,9 @@ $ make example
 $ ./example
 ```
 
-## Usage
+## 使用方法
 
-**atomic based rate limiter usage:**
+**基于标准库**`<atomic>`**的限流器用法：**
 
 ```c++
 #include <iostream>
@@ -61,7 +61,7 @@ int main() {
 }
 ```
 
-**atomic based slack usage:**
+**基于标准库**`<atomic>`**的 slack 选项用法：**
 
 ```c++
 
@@ -130,7 +130,7 @@ int main() {
 }
 ```
 
-**mutex based rate limiter usage:**
+**基于标准库** `<mutex>` **的限流器用法**
 
 ```c++
 #include <iostream>
@@ -193,6 +193,6 @@ int main() {
 }
 ```
 
-## Reference
+## 参考
 
 uber-go: https://github.com/uber-go/ratelimit
