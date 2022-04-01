@@ -4,7 +4,7 @@
 
 int main() {
   std::cout << "<--------- atomic limiter --------->" << std::endl;
-  LimiterAtomic limiter_atomic(100, std::chrono::seconds(1), 10);
+  LimiterAtomic limiter_atomic{100, std::chrono::seconds(1), 10};
   std::cout << "<---------- test limiter ---------->" << std::endl;
   auto prev = std::chrono::system_clock::now();
   for (int i = 0; i < 10; i++) {
@@ -24,7 +24,7 @@ int main() {
 
   std::cout << "\n";
   std::cout << "<--------- mutex_ limiter --------->" << std::endl;
-  LimiterMutex limiter_mutex(100, std::chrono::seconds(1), 10);
+  LimiterMutex limiter_mutex{100, std::chrono::seconds(1), 10};
   std::cout << "<---------- test limiter ---------->" << std::endl;
   prev = std::chrono::system_clock::now();
   for (int i = 0; i < 10; i++) {
