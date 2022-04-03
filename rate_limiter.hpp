@@ -3,6 +3,7 @@
 #include <thread>
 #include <chrono>
 
+// Limiter is a abstract of rate limiter
 class Limiter {
  public:
   virtual std::chrono::system_clock::time_point take() = 0;
